@@ -1,0 +1,41 @@
+Scripts:
+
+-	Crear una carperta mkdir Backups ,   cd Backups
+-	
+-	Y ahora dentro de ella creamos el script, nano backup.sh
+-	
+-	Luego colocamos el # que indica cual interprete se debe de utilizar en este scrip en este caso será /bin/bash
+-	
+-	Creamos la variable:  Date=$(date +%d-%m-%Y:%H)
+-	
+-	Ahora usare el comando tar y los siguientes parámetros para crear un archivo comprimido
+-	
+-	Tar -czvf después la ruta donde se va a guardar:  “/Backups”$Date” Y ahora le indicamos el formato con el que se va a guardar que es :  .tar.gz” /home/Alvin
+
+	Ahora le asignamos privilegios de ejecución:     chmod 744 backup.sh
+
+	Ahora ejecutamos el script:          ./backup.sh
+
+	Para descomprimirlo ::  tar -xzvf /Backups/12-02-2025:15:07.tar.gz -C /Backups/
+
+
+
+
+Script2:
+
+-	Vamos al escritorio cd /home/Alvin/Desktop
+-	
+-	Creamos un script: nano jj2.sh
+-	
+-	Colocamos el shellban #!/bin/bash
+-	
+-	Echo “Escribe el nombre del archivo”
+	Read nombre
+
+Ifconfig > /home/Alvin/Desktop/$nombre.txt
+
+Asignamos permisos de ejecucion : chmod 744 jj2.sh
+Y ahora lo ejecutamos  ./jj2.sh
+
+Ls
+Cat jj2.sh

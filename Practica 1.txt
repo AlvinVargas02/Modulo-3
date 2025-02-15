@@ -1,0 +1,17 @@
+Editar grub desde la terminal
+
+nano /etc/default/grub
+
+recuperar contrasena de Root si la he olvidado:
+
+-Dentro del grub presionar la tecla e, para editar
+-Localizar donde dice Linux y luego ir a la ultima parte de la línea con ctrl e
+-Y escribimos rd.break esto hace una interrupción al arranque , lo cual nos dará un acceso al Shell root y presionamos ctrl x para que lo lea
+-Mount -o remount,rw /sysroot
+-Chroot /sysroot
+-Ahora cambiamos la contra
+-passwd
+-Antes de salir creamos un archivo, este indicara un re etiquetado de inux:
+-touch /.autorelabel
+-exit
+-exit
