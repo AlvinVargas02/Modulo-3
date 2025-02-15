@@ -1,0 +1,34 @@
+-Instalar servicio ssh
+
+dnf install openssh-server
+
+systemctl start sshd
+systemctl status sshd
+
+En el host colocamos :
+Ssh (nombre de la maquina)@192.168.100.190
+Generar la llaves: ssh-keygen
+
+Buscar la ruta donde esta guardada nuestra llave ssh /c/users/alvin/.ssh
+
+Ahora copiar la llave publica
+
+-Vamos a nuestra maquina virtual desde ssh
+
+cd /home/alvin
+ls -a
+cd .ssh
+ls
+nano authorized.keys
+
+dentro del authorized.keys pegamos la llave publica que habiamos copiado anteriormente
+
+en nuestra maquina virtual reiniciamos el servicio ssh
+
+systemctl restart sshd
+
+luego salimos de la conexion ssh de nuestra maquina host y volvemos a conectarnos
+
+ssh alvin@192.168.100.190
+
+y no, nos deberia de pedir password
